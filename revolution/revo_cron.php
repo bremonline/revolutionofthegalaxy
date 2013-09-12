@@ -1,0 +1,1 @@
+file_get_contents('http://revolutionofthegalaxy.com/revolution/basic_advance_tick.php5');

@@ -1,0 +1,49 @@
+<?php
+	require_once('../db_fns.php5'); 
+
+	session_name("DEVREV");
+	session_start();
+
+	$player_name = $_SESSION['player_name'];
+
+	echo "<html>\n";
+  echo "<head>\n";
+  echo "  <title>DEV REV - Chat Window </title>\n";
+
+  echo "  <link rel='Stylesheet' href='chat.css' title='Style' type='text/css'/> \n";
+  echo "  <meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1' /> \n";
+  echo "  <script src='chat.js' type='text/javascript' />\n";
+  echo "</head>\n";
+	echo "<body onload='setupPanes(\"container1\", \"tab1\");'>\n";
+
+	$cp = new ChatPage();
+	$cp->display_tabs();
+
+	echo "</body>\n";
+  echo "</html>\n";
+
+//////  Functions Specific to chat
+
+class ChatPage {
+	function display_tabs() {
+		echo "Before\n";
+		
+		echo "<TABLE class='outer'>";
+		echo "<TR>";
+		echo "<TD class='tabs' onClick='return showPane(\"pane1\", this)' id='tab1'>Tab 1</TD>";
+		echo "<TD class='tabs' onClick='return showPane(\"pane2\", this)' id='tab2'>Tab 2</TD>";
+		echo "<TD class='tabs' onClick='return showPane(\"pane3\", this)' id='tab3'>Tab 3</TD>";
+		echo "</TR>/n";
+		echo "<TR>\n";
+		echo "<TD>\n";
+	  echo "<div class='tab-panes'>\n";
+	  echo " <div id='pane1'> I can put whatever content I want here</div>\n";
+	  echo " <div id='pane2'> Pane 2 Content </div>\n";
+	  echo " <div id='pane3'> Pane 3 Content </div>\n";
+		echo "</div>\n";
+		echo "</TD>\n";
+		echo "</TR>\n";
+		echo "</TABLE>\n";
+	}
+}
+?>

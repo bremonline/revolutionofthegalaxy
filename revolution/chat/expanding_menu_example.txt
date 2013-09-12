@@ -1,0 +1,192 @@
+ /*
+ * date: 2003-04-28
+ * info: http://inspire.server101.com/js/mb/
+ */
+
+ var mbW=250;
+ var mbO=[],mbP=[],mbA,mbT,mbTf;
+
+ function mbSet(m,c) {
+ if (document.getElementById&&document.createElement) {
+ var m=document.getElementById(m);
+ m.className=c;
+ var e,f,i,j;
+
+ var e=m.firstChild;
+ while (e) {
+ if (e.tagName=='LI') {
+ var div=document.createElement('div');
+ while (e.firstChild) {
+ div.appendChild(e.firstChild);
+ }
+ e.appendChild(div);
+ }
+ e=e.nextSibling;
+ }
+
+ e=m.getElementsByTagName('a');
+ if (!mbTf) mbTf=new Function('mbHAT();');
+ for (i=0;i<e.length;i++) {
+ e[i].onmouseout=e[i].onblur=mbTf;
+ }
+
+ m=m.getElementsByTagName('ul');
+ for (i=0;i<m.length;i++) {
+ if (j=m[i].id) {
+ mbO[j]=m[i];
+ e=m[i].parentNode;
+ f=e.parentNode.getAttribute('id');
+ if (mbO[f]) {
+ mbP[j]=f;
+ }
+ f=new Function('mbS(\''+j+'\');');
+ e=e.getElementsByTagName('a');
+ for (c=0;c<e.length;c++) {
+ e[c].onmouseover=e[c].onfocus=f;
+ }
+ mbH(j);
+ }
+ }
+ }}
+
+ function mbHA() {
+ if (mbA) {
+ while (mbA) mbH(mbA);
+ mbHE('visible');
+ }
+ }
+
+ function mbHAT() {
+ if (!mbT) mbT=setTimeout('mbHA();', mbW);
+ }
+
+ function mbTC() {
+ if (mbT) {
+ clearTimeout(mbT);
+ mbT=null;
+ }
+ }
+
+ function mbS(m) {
+ mbTC();
+ if (mbA) while (mbA&&m!=mbA&&mbP[m]!=mbA) mbH(mbA);
+ else mbHE('hidden');
+
+ mbSH(m,'visible');
+ mbA=m;
+ }
+
+ function mbH(m) {
+ if (m==mbA) mbA=mbP[m];
+ mbSH(m,'hidden');
+ mbT=null;
+ }
+
+ function mbSH(m,v) {
+ mbO[m].parentNode.firstChild.className=v;
+ mbO[m].style.visibility=v;
+ }
+
+ function mbHE(v) {
+ mbHEV(v,document.getElementsByTagName('select'));
+ }
+
+ function mbHEV(v,e) {
+ for (var i=0;i<e.length;i++) e[i].style.visibility=v;
+ }
+ 
+# /*
+# * date: 2003-01-09
+# * info: http://inspire.server101.com/js/xc/
+# */
+#
+# ul {
+# list-style: disc;
+# margin-left: 0;
+# padding-left: 1.5em;
+# }
+#
+# li.xc {
+# list-style: none;
+# }
+# div.xcx, div.xcc {
+# position: relative;
+# display: inline;
+# }
+# li.xc>div.xcx, li.xc>div.xcc {
+# position: static;
+# margin-left: -1.5em;
+# float: left;
+# width: 1.5em;
+# }
+# div.xcx a, div.xcc a {
+# position: absolute;
+# left: -2em;
+# }
+# div.xcx>a, div.xcc>a {
+# position: static;
+# }
+# div.xcx a:link, div.xcx a:visited,
+# div.xcc a:link, div.xcc a:visited {
+# color: #000;
+# text-decoration: none;
+# font-family: "Courier New", Courier, monospace;
+# font-size: 75%;
+# font-weight: bold;
+# }
+
+Starting the script
+
+   1. <body onload="tpSet('control', 'tabs', 'tp1', 'tp2', 'tp3');">
+
+    * The order of tp1, tp2, tp3, … will set the order for the tabs.
+    * To create tabs within tabs, call tpSet for the inside tabs first.
+
+Writing the content of each panel
+
+Write your content the way you want it to be seen if the tabbed panel javascript doesn’t work.
+
+   1. <div id="control">
+   2. <!-- any content in here (except panels) will be replaced with the tabs -->
+   3. <div id="tp2" title="Tab 2">
+   4. <!-- your content for the second tab goes in here -->
+   5. </div>
+   6. <div id="tp1" title="Tab 1">
+   7. <!-- your content for the first tab goes in here -->
+   8. </div>
+   9. </div>
+  10. <div id="tp3" title="Tab 3">
+  11. <!-- your content for the third tab goes in here -->
+  12. </div>
+
+
+   1. <ul id="x">
+   2. <li><a href="../" title="Javascript library">Javascript library</a>
+   3. <ul id="js" title="Javascript">
+   4. <li class="open"><a href="./">Expanding menu</a>
+   5. <ul id="xc" title="Documentation for expanding menu">
+   6. <li><a href="code/">HTML code</a></li>
+   7. <li><a href="code/js.html">Javascript code</a></li>
+   8. <li><a href="code/css.html">CSS code</a></li>
+   9. </ul></li>
+  10. <li><a href="../m/">Popup menu</a>
+  11. <ul id="m" title="Documentation for popup menu">
+  12. <li><a href="../m/code/js.html">Javascript code</a></li>
+  13. </ul></li>
+  14. <li><a href="../w/">Popup windows</a></li>
+  15. <li><a href="../tp/">Tabbed panels</a>
+  16. <ul id="tp" title="Documentation for tabbed panels">
+  17. <li><a href="../tp/code/">HTML code</a></li>
+  18. <li><a href="../tp/code/js.html">Javascript code</a></li>
+  19. <li><a href="../tp/code/css.html">CSS code</a></li>
+  20. </ul></li>
+  21. </ul></li>
+  22. <li><a href="/ben/resume/" title="Ben Boyle, Multimedia Developer | Resume">Author’s resume</a>
+  23. <ul id="bboyle" title="Ben Boyle">
+  24. <li><a href="/ben/resume/experience/programming/javascript.html">Javascript experience</a></li>
+  25. <li><a href="/ben/resume/experience/internet/css.html">CSS experience</a></li>
+  26. <li><a href="/ben/resume/experience/internet/xhtml.html">XHTML experience</a></li>
+  27. <li><a href="/ben/resume/contact/">Contact email form</a></li>
+  28. <li><a href="/ben/" title="Ben Boyle lives here!">Personal home page</a></li>
+  29. </ul></li>
+  30. </ul>

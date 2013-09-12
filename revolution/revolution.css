@@ -1,0 +1,421 @@
+CAPTION.STD
+{
+   background-color:DarkGreen;
+   color:white;
+   border-style:solid;
+   border-width:2px;
+   border-color:black;
+}
+
+TABLE.STD
+{ 
+   font-family:arial;
+   font-size:10pt;
+   width:850px;
+   border-style:solid;
+   border-color:black;
+   border-width:2px;
+   background-color:#000000;
+}
+
+TH.STD
+{
+   background-color:#000000;
+   font-size:10pt;
+   color:yellow;
+}
+
+TD.STD
+{  
+   font-size:10pt;
+   background-color:#101060;
+   color:white;
+   border-style:solid;
+   border-width:1px;
+   border-color:white;
+   text-align:center;
+   margin:0px auto;
+}
+
+TD.HEADER
+{  
+   font-size:10pt;
+   background-color:#409040;
+   color:white;
+   border-style:none;
+   border-width:1px;
+   text-align:center;
+}
+
+
+TABLE.INFO
+{ 
+   background-color:#000000;
+   width:850px;
+   border-width:0px;
+}
+
+TD.INFO
+{  
+   font-size:12pt;
+   background-color:#000000;
+   color:white;
+   border-color:green;
+   border-style:solid;
+   border-width:1px;
+   text-align:left;
+}
+
+TABLE.WARNING
+{ 
+   width:850px;
+   border-width:0px;
+   background-color:#200000;
+}
+
+TD.WARNING
+{  
+   font-size:12pt;
+   background-color:#400000;
+   color:white;
+   border-color:yellow;
+   border-style:solid;
+   border-color:yellow;
+   border-width:1px;
+   text-align:left;
+}
+
+TABLE.ERROR
+{ 
+   width:850px;
+   border-width:0px;
+   background-color:#200000;
+}
+
+TD.ERROR
+{  
+   font-size:12pt;
+   background-color:#400000;
+   color:white;
+   border-color:red;
+   border-style:solid;
+   border-color:red;
+   border-width:1px;
+   text-align:left;
+}
+
+
+
+
+TABLE.DEBUG
+{ 
+   font-family:arial;
+   font-size:10pt;
+   border-style:solid;
+   border-color:black;
+   border-width:0px;
+   background-color:#000000;
+}
+
+TD.DEBUG
+{  
+   font-size:10pt;
+   background-color:#000000;
+   color:white;
+   border-style:solid;
+   border-width:0px;
+   text-align:left;
+}
+
+TH.DEBUG
+{
+   background-color:#D0D000;
+   font-size:10pt;
+   color:black;
+}
+
+TD.SIDEBAR
+{  
+   font-size:10pt;
+   color:white;
+   border-color:white;
+   border-style:solid;
+   border-width:1px;
+   text-align:center;
+}
+
+TD.SIDEBARHIGHLIGHT
+{  
+   font-size:10pt;
+   color:white;
+   border-color:white;
+   border-style:solid;
+   border-width:1px;
+   text-align:center;
+   background-color:yellow;
+}
+
+TD.COMMANDBAR
+{  
+   font-size:10pt;
+   background-color:#101060;
+   color:white;
+   border-color:white;
+   border-style:solid;
+   border-width:0px;
+   text-align:center;
+   margin:0px auto;
+}
+
+TD.COMMANDBARHIGHLIGHT
+{  
+   font-size:10pt;
+   color:white;
+   border-color:white;
+   border-style:solid;
+   border-width:1px;
+   text-align:center;
+   background-color:yellow;
+}
+
+
+TD.RESEARCH-LEFT
+{  
+   font-size:10pt;
+   color:white;
+   text-align:left;
+   vertical-align:bottom;
+}
+
+TD.RESEARCH-RIGHT
+{  
+   font-size:10pt;
+   color:white;
+   text-align:right;
+   vertical-align:bottom;
+}
+TD.RESEARCH-CENTER
+{  
+   font-size:10pt;
+   color:white;
+   text-align:center;
+   vertical-align:bottom;
+}
+
+TABLE.BAR 
+{
+	margin:0px auto;
+	border-style:solid;
+	border-color:white;
+	border-width:1px;
+	background-color:#000000;
+
+}
+
+TD.BAR 
+{
+	font-size:6pt;
+	border-style:solid;
+	border-width:0px;
+	border-color:white;		
+}
+
+TABLE.LIST 
+{
+	width:100%;
+	margin:0px auto;
+  color:white;
+	border-style:solid;
+	border-color:white;
+	border-width:1px;
+	background-color:#000000;
+}
+
+TD.LIST 
+{
+	font-size:10pt;
+	border-style:solid;
+	border-width:0px;
+	border-color:white;		
+	color:white;		
+}
+
+TABLE.STATS 
+{
+	width:100%;
+	margin:0px auto;
+  color:white;
+	border-width:0px;
+  background-color:#101060;
+}
+
+TD.STATS 
+{
+	font-size:9pt;
+	border-style:solid;
+	border-width:0px;
+	border-color:white;		
+  background-color:#101060;
+}
+
+TABLE.TOPBAR 
+{
+   font-family:arial;
+	width:100%;
+	margin:0px auto;
+  color:white;
+	border-width:0px;
+}
+
+TD.TOPBAR 
+{
+	font-size:11pt;
+	border-style:solid;
+	border-width:0px;
+	border-color:white;		
+}
+
+
+
+TABLE.CONVO
+{ 
+   font-family:arial;
+   font-size:10pt;
+   width:100%;
+   border-style:solid;
+   border-color:black;
+	 padding:3px;
+   border-collapse:collapse;
+   border-width:2px;
+   background-color:#F0D0A0;
+}
+
+TH.CONVO
+{
+   font-size:10pt;
+   background-color:#702000;
+   color:#F0D0A0;
+   border-color:#702000;
+   border-style:none;
+   border-width:0px;
+   text-align:left;
+   margin:0px auto;
+}
+
+TD.CONVO
+{  
+   font-size:10pt;
+   background-color:#E0B080;
+   color:#702000;
+   border-color:#702000;
+	 padding:3px;
+   border-style:none;
+   border-width:0px;
+   text-align:left;
+   margin:0px auto;
+}
+
+TABLE.NEWS
+{ 
+   font-family:arial;
+   font-size:10pt;
+   width:850px;
+   border-style:solid;
+   border-color:black;
+   border-width:2px;
+   background-color:#000000;
+}
+
+TH.NEWS
+{
+   background-color:#000000;
+   font-size:10pt;
+   color:yellow;
+}
+
+TD.NEWS
+{  
+   font-size:10pt;
+   background-color:#409040;
+   color:white;
+   border-style:solid;
+   border-width:1px;
+   text-align:center;
+   margin:0px auto;
+}
+
+TH.NEWS-GOOD
+{
+   background-color:#004000;
+   font-size:10pt;
+   color:yellow;
+}
+
+TD.NEWS-GOOD
+{  
+   font-size:10pt;
+   background-color:#409040;
+   color:white;
+   border-style:solid;
+   border-width:1px;
+   text-align:center;
+   margin:0px auto;
+}
+
+
+TH.NEWS-BAD
+{
+   background-color:#400000;
+   font-size:10pt;
+   color:yellow;
+}
+
+TD.NEWS-BAD
+{  
+   font-size:10pt;
+   background-color:#602020;
+   color:white;
+   border-style:solid;
+   border-width:1px;
+   text-align:center;
+   margin:0px auto;
+}
+
+TABLE.TIMELINE
+{ 
+   font-family:arial;
+   font-size:9pt;
+   width:850px;
+   border-style:solid;
+   border-color:black;
+   border-width:2px;
+   background-color:#000000;
+}
+
+TD.TIMELINE
+{  
+   font-size:9pt;
+   background-color:#101060;
+   color:white;
+   border-style:solid;
+   border-width:1px;
+   border-color:white;
+   text-align:center;
+   margin:0px auto;
+}
+
+TH.TIMELINE
+{
+   background-color:#000000;
+   font-size:7pt;
+   color:yellow;
+   margin:0px auto;
+}
+
+.B
+{  
+	 font-weight:bold;
+}
+
+
+

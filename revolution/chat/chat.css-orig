@@ -1,0 +1,24 @@
+body {
+	font: small arial, helvetica, sans-serif;
+}
+	
+
+TD.tab-active {
+	color: #000;
+	background: #FF0;
+}
+	
+TD.tab-disabled {
+	color: #a80;
+	background: #fe5;
+}
+	
+TD.tabs a.tab-disabled:hover {
+	background: #FF0;
+	color: #000;
+}
+
+.tab-panes {
+	color:black;
+	background:white;
+}

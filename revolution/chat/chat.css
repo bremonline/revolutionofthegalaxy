@@ -1,0 +1,103 @@
+body {
+	font-size:small
+}
+
+.outer {
+	background:#FFFFFF;
+	height:93%;
+}
+
+.content {
+	width:99%;
+	border:5px solid #696;
+	height:100%;
+	background:#696;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	z-index:2;
+}
+
+.pane {
+	padding:5px;
+	background:#696;
+	vertical-align:bottom;
+}
+
+TD.nav {
+	color:#000;
+	background:#FEB;
+	border:1px solid #000;
+	position:relative;
+	text-decoration:none;
+	height:auto;
+	padding:3px 3px 4px;
+	top:3px;
+}
+
+.subnav {
+	background:#FEB;
+	height:1em;
+	color:white;
+	padding:5px 5px;
+}
+
+.subnav a {color:white;text-decoration:none;}
+
+TD.subnav:hover {
+	background:#FEB;
+	color:#696;
+}
+
+.chat_area {
+	border: 2px solid black;
+	background:#FFF0E0;
+	height:400px;
+	overflow:auto;
+	padding:5px;
+	vertical-align:top;
+}
+
+.player_node {
+	background:white;
+	color:black;
+	border: 0px none;
+	padding:2px;
+	text-align:center;
+}
+
+.status_bar {
+	width:950;
+	text-align:center;
+	background:#2D2;
+	border: 1px solid black;
+}
+
+td.status_bar:hover {
+	width:950;
+	text-align:center;
+	background:#888;
+	border: 1px solid black;
+}
+
+.choice_selector {
+	position:absolute;
+	background:#EDA;
+	border: 1px solid black;
+	z-index: -1;
+}
+
+.choice {
+	border: 1px solid #EDA;
+	width:400px;
+	padding:2px 10px 2px;
+}
+
+
+.panes {
+	background:#696;
+	overflow:auto;
+	padding:5px;
+	vertical-align:top;
+}
