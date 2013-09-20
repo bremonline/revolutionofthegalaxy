@@ -49,7 +49,7 @@ class BattleCalculator {
 					if ($dm->does_player_know_development($player, "Combined Attack")) $attacker_att_bonus=true;
 					if ($dm->does_player_know_development($player, "Combined Defense")) $attacker_def_bonus=true;
 					if ($dm->does_player_know_development($player, "Combined Focus")) $attacker_foc_bonus=true;
-					if ($dm->does_player_know_development($player, "Combined Intellience")) $attacker_int_bonus=true;
+					if ($dm->does_player_know_development($player, "Combined Intelligence")) $attacker_int_bonus=true;
 					if ($dm->does_player_know_development($player, "Combined Discipline")) $attacker_dis_bonus=true;
 					
 					if ($dm->does_player_know_development($player, "Creature Capture")) $attacker_has_capture_mastery=true;
@@ -58,7 +58,7 @@ class BattleCalculator {
 					if ($dm->does_player_know_development($player, "Combined Attack")) $defender_att_bonus=true;
 					if ($dm->does_player_know_development($player, "Combined Defense")) $defender_def_bonus=true;
 					if ($dm->does_player_know_development($player, "Combined Focus")) $defender_foc_bonus=true;
-					if ($dm->does_player_know_development($player, "Combined Intellience")) $defender_int_bonus=true;
+					if ($dm->does_player_know_development($player, "Combined Intelligence")) $defender_int_bonus=true;
 					if ($dm->does_player_know_development($player, "Combined Discipline")) $defender_dis_bonus=true;
 
 					if ($dm->does_player_know_development($player, "Creature Capture")) $defender_has_capture_mastery=true;
