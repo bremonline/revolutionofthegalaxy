@@ -86,8 +86,8 @@ class BattleCalculator {
 			// Time to compute Damage
 			$total_attackers->damage = $this->get_damage($total_defenders, $total_attackers);
 			$total_defenders->damage = $this->get_damage($total_attackers, $total_defenders);
-			$total_attackers->captured = $this->get_creature_capture($total_defenders*2.0, $total_attackers);
-			$total_defenders->captured = $this->get_creature_capture($total_attackers, $total_defenders);
+			$total_attackers->captured = $this->get_creature_capture_att($total_defenders, $total_attackers);
+			$total_defenders->captured = $this->get_creature_capture_def($total_attackers, $total_defenders);
 			$total_attackers->structures_captured = $this->get_structure_capture($total_attackers, $total_defenders);
 			$cap_structures = floor (($pd->unassigned + $pd->extractor + $pd->genetic_lab + $pd->powerplant + $pd->factory) * 0.10);
 			if ($total_defenders->damage == 100) {
@@ -515,7 +515,19 @@ class BattleCalculator {
 		return $damage;
 	}
 
-	function get_creature_capture($attack, $defense) {
+	function get_creature_capture_att($attack, $defense) {
+		$capture_ratio = ($attack->int*2)/($defense->dis+1);
+		if ($capture_ratio > 2.0) $damage = 10;
+		else if ($capture_ratio > 1.0) $damage = 5;
+		else if ($capture_ratio > 0.5) $damage = 3;
+		else if ($capture_ratio > 0.1) $damage = 2;
+		else if ($capture_ratio > 0.05) $damage = 1;
+		
+		else $damage = 0;
+		
+		return $damage;
+	}
+	function get_creature_capture_def($attack, $defense) {
 		$capture_ratio = $attack->int/($defense->dis+1);
 		if ($capture_ratio > 2.0) $damage = 10;
 		else if ($capture_ratio > 1.0) $damage = 5;
